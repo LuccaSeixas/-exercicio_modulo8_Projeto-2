@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contatos</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <header>
+            <img src="./imagens/notebook-of-contacts.png" alt="Agenda com a silhueta de uma pessoa no meio">
+            <h1>Agenda de contatos</h1>
+        </header>
+        <div class="lista-contatos">
+            <h2>Contatos salvos</h2>
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Número</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th id="coluna-numero"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>Adicionar contatos</h2>
+        <form id="cadastro-contatos">
+            <input type="text" id=nome-cadastro placeholder="Nome">
+            <input type="number" id=numero-cadastro placeholder="Número">
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
