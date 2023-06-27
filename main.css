@@ -1,83 +1,70 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
-    background-color: rgb(211, 211, 211);
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
-.container{
-    max-width: 640px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 120px;
-    background-color: rgb(175, 221, 224);
-    padding: 8px 32px;
+header, footer{
+    background-color: #01132b;
 }
 
-h2{
-    padding: 8px 0;
+
+.nav-item .nacv-link a,
+.navbar h1:hover{
+    color: #6baaff;
 }
 
-header{
-    display: flex;
-    align-items:center;
-    padding: 24px 0 8px 0;
+.nav-item .nav-link.active{
+    color: #01132b;
+    background-color: #6baaff;
 }
 
-.container img{
-    height: 32px;
-    margin-right: 16px;
+.navbar-toggler{
+    background-color: #6baaff;
 }
 
-.lista-contatos{
-    border-top: 2px solid black;
-    border-bottom: 1px solid black;
+.custom-border{
+    border: 2px solid #6baaff;
 }
 
-table{
-    width: 100%;
+.text-colored{
+    color: #6baaff;
 }
 
-thead{
-    font-weight: bolder;
+.section-title{
+    color: #6baaff;
 }
 
-table th{
-    border-bottom: 1px solid black;
-    padding: 8px;
-    font-size: 16px;
-    font-weight: bold;
+#quem-somos,
+#comprar-ou-vender{
+    background-color: #e8eaec;
 }
 
-form{
-    display: flex;
-    max-width: 640px;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 24px;
+.modal-header{
+    border-bottom: none;
 }
 
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+#painel-entrar .modal-content{
+    background-image: url(./img/entrar/entrar.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #e8eaec;
 }
 
-input, button{
-    border: none;
-    margin-right: 4px;
-    padding: 6px;
+#painel-entrar .modal-content a,
+#painel-cadastro .modal-content a{
+    color: #01132b;
 }
 
-button{
-    background-color: rgb(166, 185, 221);
-    cursor: pointer;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 500;
+#painel-cadastro .modal-content{
+    background-image: url(./img/cadastro/cadastro.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #000000;
 }
 
-button:hover{
-    background-color: rgb(198, 215, 247);
+input{
+    opacity: 0.2;
+}
+
+footer ul{
+    list-style: none;
 }

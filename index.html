@@ -2,43 +2,344 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda de contatos</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
 <body>
-    <div class="container">
-        <header>
-            <img src="./imagens/notebook-of-contacts.png" alt="Agenda com a silhueta de uma pessoa no meio">
-            <h1>Agenda de contatos</h1>
-        </header>
-        <div class="lista-contatos">
-            <h2>Contatos salvos</h2>
-            <table cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Número</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th></th>
-                        <th id="coluna-numero"></th>
-                    </tr>
-                </tbody>
-            </table>
+    <header class="navbar navbar-expand-lg sticky-top p-4">
+        <div class="container">
+            <h1 class="navbar-brand text-colored m-0 fw-bold">Corretora Ebac</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-cabecalho">
+                <span class="navbar-toggler-icon bordered"></span>
+            </button>
+            <nav class="navbar-collapse collapse flex-grow-0" id="menu-cabecalho">
+                <ul class="nav nav-pills d-block d-md-flex">
+                    <li class="nav-item fw-bold">
+                        <a href="#quem-somos" class="nav-link text-colored active">Quem somos</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#novidades-do-dia" class="nav-link text-colored text-colored">Novidades do dia</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#comprar-ou-vender" class="nav-link text-colored">Comprar ou vender</a>
+                    </li>
+                </ul>
+                <ul class="nav nav-pills d-block d-md-flex">
+                    <li class="nav-item fw-bold">
+                        <button id="entrar" class="nav-link text-colored btn" data-bs-toggle="modal" data-bs-target="#painel-entrar"><i class="bi bi-person"></i>Entrar</button>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <button id="cadastro" class="nav-link text-colored btn custom-border" data-bs-toggle="modal" data-bs-target="#painel-cadastro">Abra sua conta</button>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <h2>Adicionar contatos</h2>
-        <form id="cadastro-contatos">
-            <input type="text" id=nome-cadastro placeholder="Nome">
-            <input type="number" id=numero-cadastro placeholder="Número">
-            <button type="submit">Adicionar</button>
-        </form>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
+        <section class="pt-md-5 pt-3 pb-5" id="quem-somos">
+            <div class="container">
+                <div class="row align-items-center d-block d-md-flex">
+                    <div class="col-md-6">
+                        <h3 class="section-title fw-bold">Quem somos</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sit ipsam illo nesciunt ea at fugit enim placeat reprehenderit tempora consequatur iure et officiis numquam, odio corporis minima facilis qui!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sit ipsam illo nesciunt ea at fugit enim placeat reprehenderit tempora consequatur iure et officiis numquam, odio corporis minima facilis qui!
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="w-100 rounded" src="./img/quem-somos/grafico-bolsa-azul.jpg" alt="Gráfico da bolsa de valores no tom azul">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-md-5 pt-3 pb-5" id="novidades-do-dia">
+            <div class="container">
+                <h3 class="section-title fw-bold">Novidades do dia</h3>
+                <nav class="nav nav-tabs">
+                    <button data-bs-toggle="tab" data-bs-target="#aba-brasil" class="nav-link active">
+                        Brasil
+                    </button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba-mundo" class="nav-link">
+                        Mundo
+                    </button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="aba-brasil">
+                        <div class="row">
+                            <div class="col-md-4 mt-2">
+                                <img class="w-100 rounded" src="./img/noticias/brasil/cedulas-reais.webp" alt="Cédulas de Reais">
+                                <h5 class="fw-bold mt-2">Tesouro Direto: taxas dos títulos de inflação caem para até 5,21% com política monetária ainda em foco</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore enim beatae vero dicta cumque. Numquam doloribus exercitationem aliquid natus, sunt possimus quo facere ...
+                            </p>
+                            <a href="#">
+                                ver mais ...
+                            </a>
+                            </div>
+                            <div class="col-md-4 mt-md-2 mt-5">
+                                <img class="w-100 rounded" src="./img/noticias/brasil/campos-neto-congresso.webp" alt="Cédulas de Reais">
+                                <h5 class="fw-bold mt-2">Líder do governo no Congresso quer convocar Campos Neto para dar explicações sobre Selic em comissão do Senado</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore enim beatae vero dicta cumque. Numquam doloribus exercitationem aliquid natus, sunt possimus quo facere ...
+                            </p>
+                            <a href="#">
+                                ver mais ...
+                            </a>
+                            </div>
+                            <div class="col-md-4 mt-md-2 mt-5">
+                                <img class="w-100 rounded" src="./img/noticias/brasil/Rogerio_Ceron.webp" alt="Cédulas de Reais">
+                                <h5 class="fw-bold mt-2">Governo pode ter déficit primário inferior a R$ 100 bi em 2023, diz secretário do Tesouro</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore enim beatae vero dicta cumque. Numquam doloribus exercitationem aliquid natus, sunt possimus quo facere ...
+                            </p>
+                            <a href="#">
+                                ver mais ...
+                            </a>
+                            </div>
+                            <div class="col-md-4 mt-md-4 mt-5">
+                                <img class="w-100 rounded" src="./img/noticias/brasil/carros-concessionaria.webp" alt="Cédulas de Reais">
+                                <h5 class="fw-bold mt-2">Carros ‘populares’ com desconto: governo divulga tabela inflada e com inconsistências</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore enim beatae vero dicta cumque. Numquam doloribus exercitationem aliquid natus, sunt possimus quo facere ...
+                            </p>
+                            <a href="#">
+                                ver mais ...
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="aba-mundo">
+                        <div class="row">
+                            <div class="col-md-4 mt-2">
+                                <img class="w-100 rounded" src="./img/noticias/mundo/GettyImages-72662476.webp" alt="Cédulas de Reais">
+                                <h5 class="fw-bold mt-2">Tesouro Direto: taxas dos títulos de inflação caem para até 5,21% com política monetária ainda em foco</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore enim beatae vero dicta cumque. Numquam doloribus exercitationem aliquid natus, sunt possimus quo facere ...
+                            </p>
+                            <a href="#">
+                                ver mais ...
+                            </a>
+                            </div>
+                            <div class="col-md-4 mt-md-2 mt-5">
+                                <img class="w-100 rounded" src="./img/noticias/mundo/gpa_banner4.webp" alt="Cédulas de Reais">
+                                <h5 class="fw-bold mt-2">Líder do governo no Congresso quer convocar Campos Neto para dar explicações sobre Selic em comissão do Senado</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore enim beatae vero dicta cumque. Numquam doloribus exercitationem aliquid natus, sunt possimus quo facere ...
+                            </p>
+                            <a href="#">
+                                ver mais ...
+                            </a>
+                            </div>
+                            <div class="col-md-4 mt-md-2 mt-5">
+                                <img class="w-100 rounded" src="./img/noticias/mundo/Rogerio_Ceron.webp" alt="Cédulas de Reais">
+                                <h5 class="fw-bold mt-2">Governo pode ter déficit primário inferior a R$ 100 bi em 2023, diz secretário do Tesouro</h5>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore enim beatae vero dicta cumque. Numquam doloribus exercitationem aliquid natus, sunt possimus quo facere ...
+                            </p>
+                            <a href="#">
+                                ver mais ...
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-md-5 pt-3 pb-5" id="comprar-ou-vender">
+            <div class="container">
+                <h3 class="section-title fw-bold mb-md-4 mb-3">Compra ou venda</h3>
+                <div id="carousel-cotacoes" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item card active" data-bs-interval="4000">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="card-title">Banrisul</h5>
+                                        <h6 class="card-subtitle mb-2">BVMF</h6>
+                                        <p class="card-subtitle mb-2 fs-2">R$14,78</p>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                        <button type="button" class="btn btn-danger ms-2">Vender</button>
+                                        <p class="card-footer mt-2">26 de jun., 13:28:17 UTC-3 · BRL · BVMF · Exoneração de responsabilidade</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <img class="w-100" src="./img/cotacoes/c-banrisul.jpg" alt="gráfico dos resultados da empresa Banrisul na bolsa de valores">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item card" data-bs-interval="4000">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="card-title">Banco do Brasil</h5>
+                                        <h6 class="card-subtitle mb-2">BBAS3</h6>
+                                        <p class="card-subtitle mb-2 fs-2">R$ 50,50</p>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                        <button type="button" class="btn btn-danger ms-2">Vender</button>
+                                        <p class="card-footer mt-2">26 de jun., 13:28:17 UTC-3 · BRL · BVMF · Exoneração de responsabilidade</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <img class="w-100" src="./img/cotacoes/c-bradesco.jpg" alt="gráfico dos resultados da empresa Banco do Brasil Luiza na bolsa de valores">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item card" data-bs-interval="4000">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="card-title">Petrobras</h5>
+                                        <h6 class="card-subtitle mb-2">PETR4</h6>
+                                        <p class="card-subtitle mb-2 fs-2">R$ 30,69</p>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                        <button type="button" class="btn btn-danger ms-2">Vender</button>
+                                        <p class="card-footer mt-2">26 de jun., 13:28:17 UTC-3 · BRL · BVMF · Exoneração de responsabilidade</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <img class="w-100" src="./img/cotacoes/c-petrobras.jpg" alt="gráfico dos resultados da empresa Petrobras na bolsa de valores">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item card" data-bs-interval="4000">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="card-title">Magazine Luiza</h5>
+                                        <h6 class="card-subtitle mb-2">MGLU3 </h6>
+                                        <p class="card-subtitle mb-2 fs-2">R$ 3,42</p>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                        <button type="button" class="btn btn-danger ms-2">Vender</button>
+                                        <p class="card-footer mt-2">26 de jun., 13:28:17 UTC-3 · BRL · BVMF · Exoneração de responsabilidade</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <img class="w-100" src="./img/cotacoes/c-magazine-luiza.jpg" alt="gráfico dos resultados da empresa Magazine Luiza na bolsa de valores">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item card" data-bs-interval="4000">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="card-title">Oi</h5>
+                                        <h6 class="card-subtitle mb-2">OIBR3 </h6>
+                                        <p class="card-subtitle mb-2 fs-2">R$ 1,04</p>
+                                        <button type="button" class="btn btn-success">Comprar</button>
+                                        <button type="button" class="btn btn-danger ms-2">Vender</button>
+                                        <p class="card-footer mt-2">26 de jun., 13:28:17 UTC-3 · BRL · BVMF · Exoneração de responsabilidade</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <img class="w-100" src="./img/cotacoes/c-oi.jpg" alt="gráfico dos resultados da empresa Oi na bolsa de valores">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button data-bs-target="#carousel-cotacoes" data-bs-slide="prev" class="carousel-control-prev"></button>
+                        <button data-bs-target="#carousel-cotacoes" data-bs-slide="next" class="carousel-control-next"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <script src="main.js"></script>
+    <div class="modal" id="painel-entrar">
+        <div  class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Bem-vindo</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <form class="flex-column">
+                                <label for="usuario">Usuário:</label>
+                                <input type="text" name="usuario" id="usuario">
+                                <label class="mt-2" for="senha">Senha:</label>
+                                <input type="text" name="senha" id="senha">
+                                <button class="btn btn-sm btn-primary mt-2 mb-4" type="submit">Entrar</button>
+                            </form>
+                            <span>Esqueceu o usuário ou senha ? <a href="#">Clique aqui</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-lg" id="painel-cadastro">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Cadastre-se grátis para investir</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                        <form class="d-block flex-column">
+                            <div class="form-group mb-2">
+                            <label for="usuario">Nome completo (sem abreviações)</label>
+                            <input type="text" name="usuario" id="usuario" class="form-control">
+                            </div>
+                            <div class="form-group mb-2">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group mb-2">
+                            <label for="celular">Celular</label>
+                            <input type="number" name="celular" id="celular" class="form-control">
+                            </div>
+                            <div class="form-group mb-2">
+                            <label for="cpf">CPF</label>
+                            <input type="number" name="cpf" id="cpf" class="form-control">
+                            </div>
+                            <div class="form-group mb-2">
+                            <label for="senha">Senha</label>
+                            <input type="text" name="senha" id="senha" class="form-control">
+                            </div>
+                            <button class="btn btn-primary mt-2 mb-4" type="submit">Cadastrar</button>
+                        </form>
+                        <span>Ao continuar, você está de acordo com a nossa <a href="#">Política de Privacidade.</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-colored p-4">
+        <div class="container d-flex flex-md-row flex-column justify-content-between aliegn-items-md-cnter align-items-start">
+            <p>
+                2023 &copy; Corretora EBAC - Todos direitos reservados
+            </p>
+            <p class="text-center">
+                Rua HTML, 1010 - CSS, São Paulo - SP
+            </p>
+            <ul class="d-flex justify-content-md-end p-0">
+                <li class="fs-2">
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="fs-2 ms-2 me-2">
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li class="fs-2">
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
